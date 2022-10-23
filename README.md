@@ -137,8 +137,27 @@ El asistente determinara que es la misma persona.
 ````
 ### Resultado del comando *Detecta Objetos*:
 
-*El asistente se comunica con la camara del sistema y despliega el widget de la misma para la detección de objetos*
+*El asistente se comunica con la camara del sistema y despliega el widget de la misma para la detección de objetos, en este caso se entreno para poder detectar autos.*
 
 <p align="center">
   <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/yolo_praxthon.png?raw=true" alt="yolo.jpg"/>
 </p>
+
+### Notas de implementación comando *Detecta Objetos*:
+
+1. El asistente hace uso de YOLOv5 haciendo uso del modelo "x"
+2. Se entreno el modelo con un dataset de imagenes generado por mi mismo, el cual por la premura es pequeño una volumen de 150 imagenes para el training y 30 imagenes para su validación. (data.zip)
+3. Se hizo uso del YOLOv5 Custom Training Notebook para el entrenamiento del dataset custom con YOLOv5:
+
+https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb
+
+````
+!python train.py --img 640 --batch 16 --epochs 50 --data /content/yolov5/data/custom.yaml --weights yolov5x.pt --cache
+````
+
+<p align="center">
+  <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/yolo_training.png?raw=true" alt="yolo_training.jpg"/>
+</p>
+
+
+
