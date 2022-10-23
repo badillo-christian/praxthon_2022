@@ -60,8 +60,9 @@ python .\asistente.py
 
 ### Ejemplo de comando *Búsqueda en Amazon*:
 
-# *Pandita busca en amazon zapatos*
-
+```diff
+!! *Pandita busca en amazon zapatos*
+```
 ### Resultado del comando *Búsqueda en Amazon*:
 
 *El asistente abre un navegador con el resultado de la busqueda:*
@@ -78,7 +79,7 @@ python .\asistente.py
 
 ### Ejemplo de comando *Entrenar rostro*:
 
-# *Pandita entrena rostro de Cris*
+### *Pandita entrena rostro de Cris*
 
 ### Resultado del comando *Entrenar rostro*:
 
