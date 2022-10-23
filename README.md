@@ -60,7 +60,9 @@ python .\asistente.py
 
 ### Ejemplo de comando *Búsqueda en Amazon*:
 
-<p style='color:red'> "Pandita busca en amazon zapatos" </p>
+````
+ *"Pandita busca en amazon zapatos"*
+````
 
 ### Resultado del comando *Búsqueda en Amazon*:
 
@@ -77,9 +79,9 @@ python .\asistente.py
 </p>
 
 ### Ejemplo de comando *Entrenar rostro*:
-
-### *Pandita entrena rostro de Cris*
-
+````
+*Pandita entrena rostro de Cris*
+````
 ### Resultado del comando *Entrenar rostro*:
 
 *El asistente se comunica con la camara del sistema y despliega el widget de la misma para capturar el rostro y almacenarlo*
