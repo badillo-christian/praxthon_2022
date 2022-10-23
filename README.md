@@ -33,7 +33,17 @@ pip install tensorflow
 pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt
 ````
 
+### Comandos soportados:
 
-
-### Explicacion:
-
+- [x] COMANDO_QUE_HORA_ES >>> 'qué hora es'
+- [x] COMANDO_QUE_DIA_ES >>> 'qué día es'
+- [x] COMANDO_BUSCA_EN_WIKIPEDIA >>> 'busca en wikipedia'
+- [x] COMANDO_BUSCA_EN_GOOGLE >>> 'busca en google'
+- [x] COMANDO_BUSCA_EN_YOUTUBE >>>'busca en youtube'
+- [x] COMANDO_BUSCA_EN_AMAZON >>> 'busca en amazon'
+- [x] COMANDO_BUSCA_EN_LINKEDIN >>> 'busca en linkedin'
+- [x] COMANDO_TRADUCE_AL_INGLES >>> 'traduce al inglés'
+- [x] COMANDO_ENTRENA_ROSTRO_DE >>> 'entrena rostro de'
+- [x] COMANDO_QUIEN_SOY >>> 'quién soy'
+- [x] COMANDO_DETECTA_OBJETOS >>> 'detecta objetos'
+- [x] COMANDO_PARAR >>> 'parar'
