@@ -122,5 +122,12 @@ Ya que se al ejecutarse dicho comando se compara el rostro actual contra los ent
     matches = comp.match(descr_a, descr_b)  
 ````
 
+En caso de que exista una similitud mayor o igual al 
+
+````
+UMBRAL_IDENTIFICACION_ROSTRO = 0.93
+````
+
+El asistente determinara que es la misma persona.
 
 
