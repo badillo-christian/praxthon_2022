@@ -60,9 +60,8 @@ python .\asistente.py
 
 ### Ejemplo de comando *Búsqueda en Amazon*:
 
-```diff
-!"Pandita busca en amazon zapatos"
-```
+<p style='color:red'> "Pandita busca en amazon zapatos" </p>
+
 ### Resultado del comando *Búsqueda en Amazon*:
 
 *El asistente abre un navegador con el resultado de la busqueda:*
