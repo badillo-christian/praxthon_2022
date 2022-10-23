@@ -146,7 +146,7 @@ El asistente determinara que es la misma persona.
 ### Notas de implementación comando *Detecta Objetos*:
 
 1. El asistente hace uso de YOLOv5 haciendo uso del modelo "x"
-2. Se entreno el modelo con un dataset de imagenes generado por mi mismo, el cual por la premura es pequeño una volumen de 150 imagenes para el training y 30 imagenes para su validación. (data.zip)
+2. Se entreno el modelo con un dataset de imagenes generado por mi mismo, el cual por la premura es pequeño una volumen de 150 imagenes para el training y 30 imagenes para su validación. (/yolo/data.zip)
 3. Se hizo uso del YOLOv5 Custom Training Notebook para el entrenamiento del dataset custom con YOLOv5:
 
 https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tutorial/blob/main/yolov5-custom-training.ipynb
@@ -159,5 +159,8 @@ https://colab.research.google.com/github/roboflow-ai/yolov5-custom-training-tuto
   <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/yolo_training.png?raw=true" alt="yolo_training.jpg"/>
 </p>
 
+<p align="center">
+  <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/yolo_tensorboard.png?raw=true" alt="yolo_training.jpg"/>
+</p>
 
 
