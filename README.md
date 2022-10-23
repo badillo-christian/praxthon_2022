@@ -1,7 +1,7 @@
 ## PRAXTHON 2022 - Asistente Virtual: **Pandita**
 
 <p align="center">
-  <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/panda.png?raw=true" alt="Sublime's custom image"/>
+  <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/panda.png?raw=true" alt="Asistente pandita"/>
 </p>
 
 ### Resumen:
@@ -10,7 +10,7 @@
   * Reto:
 
 <p align="center">
-  <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/requerimiento.jpeg?raw=true" alt="Sublime's custom image"/>
+  <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/requerimiento.jpeg?raw=true" alt="Reto"/>
 </p>
 
 ### Consideraciones previas:
@@ -47,3 +47,27 @@ pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/master/requi
 - [x] COMANDO_QUIEN_SOY >>> 'quién soy'
 - [x] COMANDO_DETECTA_OBJETOS >>> 'detecta objetos'
 - [x] COMANDO_PARAR >>> 'parar'
+
+### Ejecuci[on] del asistente:
+
+````
+python .\asistente.py
+````
+
+### Ejemplo de comando * *Búsqueda en Amazon* * :
+
+* * Pandita busca en amazon zapatos * *
+
+### Resultado del comando:
+
+Se abre un navegador con el resultado de la busqueda:
+
+<p align="center">
+  <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/resultado_amazon.png?raw=true" alt="Resultado comando"/>
+</p>
+
+De igual forma se genera un intent para el envío de un mensaje de whatsapp con la recomendación resultante de la búsqueda.
+
+<p align="center">
+  <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/whatsapp.png?raw=true" alt="Resultado comando"/>
+</p>
