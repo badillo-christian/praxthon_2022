@@ -16,6 +16,17 @@
 ### Consideraciones previas:
   * El nombre del asistente es **Pandita**
   * Es necesario establecer el valor correcto del identificador de idioma español de acuerdo tu Sistema Operativo, en mi caso el español corresponde al identificador #2
+    ````
+    OS_VOICE_IDENTIFIER = 2
+    ````
+  * Es necesario ajustar la ruta de pesos de YOLO en caso de querer ejecutar el comando de detección de objetos. 
+    ````
+    PATH_PESOS_YOLO = 'C:/praxthon/model_pesos/best.pt'
+    ````
+  El objeto de pesos "best.pt" se puede descargar del siguiente link: 
+  
+  https://we.tl/t-ODzeNoUkWj
+  
   * Proyectos utilizados: 
 
 ````
