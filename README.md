@@ -61,7 +61,7 @@ python .\asistente.py
 ### Ejemplo de comando *Búsqueda en Amazon*:
 
 ````
- *"Pandita busca en amazon zapatos"*
+ "Pandita busca en amazon zapatos"
 ````
 
 ### Resultado del comando *Búsqueda en Amazon*:
@@ -130,4 +130,15 @@ UMBRAL_IDENTIFICACION_ROSTRO = 0.93
 
 El asistente determinara que es la misma persona.
 
+### Ejemplo de comando *Detecta Objetos*:
 
+````
+ "Pandita detecta objetos"
+````
+### Resultado del comando *Detecta Objetos*:
+
+*El asistente se comunica con la camara del sistema y despliega el widget de la misma para la detección de objetos*
+
+<p align="center">
+  <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/yolo_praxthon.png?raw=true" alt="yolo.jpg"/>
+</p>
