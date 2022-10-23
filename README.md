@@ -66,7 +66,7 @@ python .\asistente.py
 
 ### Resultado del comando *Búsqueda en Amazon*:
 
-*El asistente abre un navegador con el resultado de la busqueda:*
+El asistente abre un navegador con el resultado de la busqueda:
 
 <p align="center">
   <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/resultado_amazon.png?raw=true" alt="Resultado comando"/>
@@ -80,7 +80,7 @@ python .\asistente.py
 
 ### Ejemplo de comando *Entrenar rostro*:
 ````
-*Pandita entrena rostro de Cris*
+Pandita entrena rostro de Cris
 ````
 ### Resultado del comando *Entrenar rostro*:
 
@@ -106,6 +106,21 @@ python .\asistente.py
   <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/cris.jpg?raw=true" alt="cris.jpg"/>
 </p>
 
+4. Esta imagen se utiliza posteriormente en caso de que se ejecute el comando: 
+
+````
+Pandita quien soy?
+````
+
+Ya que se al ejecutarse dicho comando se compara el rostro actual contra los entrenados previamente. Para dicha comparación se hace uso de la funcion de OpenCV: ORB (Oriented FAST and Rotated BRIEF).
+
+````
+    orb = cv2.ORB_create()  
+    kpa, descr_a = orb.detectAndCompute(img1, None)  
+    kpb, descr_b = orb.detectAndCompute(img2, None)  
+    comp = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck = True) 
+    matches = comp.match(descr_a, descr_b)  
+````
 
 
 
