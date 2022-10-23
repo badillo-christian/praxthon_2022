@@ -52,7 +52,7 @@ pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/master/requi
 
 
 
-### Ejecuci[on] del asistente:
+### Ejecución del asistente:
 
 ````
 python .\asistente.py
@@ -60,7 +60,7 @@ python .\asistente.py
 
 ### Ejemplo de comando *Búsqueda en Amazon*:
 
-*Pandita busca en amazon zapatos*
+# *Pandita busca en amazon zapatos*
 
 ### Resultado del comando *Búsqueda en Amazon*:
 
@@ -78,7 +78,7 @@ python .\asistente.py
 
 ### Ejemplo de comando *Entrenar rostro*:
 
-*Pandita entrena rostro de Cris*
+# *Pandita entrena rostro de Cris*
 
 ### Resultado del comando *Entrenar rostro*:
 
@@ -94,7 +94,9 @@ python .\asistente.py
 2. Se obtiene una imagen normalizada con el puro rostro resultante de la ejecución del método:
 
 ````
-caras = detector.detect_faces(pixeles) #Se obtienen la caras a través de Multi-task Cascaded Convolutional Networks
+    pixeles = pyplot.imread(img)
+    detector = MTCNN()
+    caras = detector.detect_faces(pixeles) #Se obtienen la caras a través de Multi-task Cascaded Convolutional Networks
 ````
 3. Se almacena la imagen con el nombre del rostro recibido en el comando, en este caso **cris**
 
