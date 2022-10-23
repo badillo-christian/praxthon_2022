@@ -1,13 +1,13 @@
 # praxthon_2022 Asistente Virtual
 
-![LOGO](https://github.com/badillo-christian/praxthon_2022/blob/master/panda.jpeg)
+![LOGO](https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/panda.jpg)
 
 ### Resumen:
 
 - Asistente virtual elaborado para el praxthon 2022
 - Requerimiento:
 
-![REQUERIMIENTO](https://github.com/badillo-christian/praxthon_2022/blob/master/requerimiento.jpeg)
+![REQUERIMIENTO](https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/requerimiento.jpeg)
 
 
 ### Consideraciones previas:
