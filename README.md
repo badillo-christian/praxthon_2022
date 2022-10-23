@@ -61,7 +61,7 @@ python .\asistente.py
 ### Ejemplo de comando *Búsqueda en Amazon*:
 
 ```diff
-!! *Pandita busca en amazon zapatos*
+!"Pandita busca en amazon zapatos"
 ```
 ### Resultado del comando *Búsqueda en Amazon*:
 
