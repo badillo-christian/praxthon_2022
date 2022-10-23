@@ -35,6 +35,8 @@ pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/master/requi
 
 ### Comandos soportados:
 
+** Para cada uno de estos comandos el asistente establece una conversación con el usuario por medio de voz y atiende a la solicitud realizada: **
+
 - [x] COMANDO_QUE_HORA_ES >>> 'qué hora es'
 - [x] COMANDO_QUE_DIA_ES >>> 'qué día es'
 - [x] COMANDO_BUSCA_EN_WIKIPEDIA >>> 'busca en wikipedia'
@@ -48,26 +50,58 @@ pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/master/requi
 - [x] COMANDO_DETECTA_OBJETOS >>> 'detecta objetos'
 - [x] COMANDO_PARAR >>> 'parar'
 
+
+
 ### Ejecuci[on] del asistente:
 
 ````
 python .\asistente.py
 ````
 
-### Ejemplo de comando * *Búsqueda en Amazon* * :
+### Ejemplo de comando *Búsqueda en Amazon*:
 
-* * Pandita busca en amazon zapatos * *
+*Pandita busca en amazon zapatos*
 
-### Resultado del comando:
+### Resultado del comando *Búsqueda en Amazon*:
 
-Se abre un navegador con el resultado de la busqueda:
+*El asistente abre un navegador con el resultado de la busqueda:*
 
 <p align="center">
   <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/resultado_amazon.png?raw=true" alt="Resultado comando"/>
 </p>
 
-De igual forma se genera un intent para el envío de un mensaje de whatsapp con la recomendación resultante de la búsqueda.
+*De igual forma el asistente genera un intent para el envío de un mensaje de whatsapp con la recomendación resultante de la búsqueda.*
 
 <p align="center">
   <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/whatsapp.png?raw=true" alt="Resultado comando"/>
 </p>
+
+### Ejemplo de comando *Entrenar rostro*:
+
+*Pandita entrena rostro de Cris*
+
+### Resultado del comando *Entrenar rostro*:
+
+*El asistente se comunica con la camara del sistema y despliega el widget de la misma para capturar el rostro y almacenarlo*
+
+<p align="center">
+  <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/entrena_rostro_1.png?raw=true" alt="Widget Camara"/>
+</p>
+
+### Notas de implementación comando *Entrenar rostro*:
+
+1. El asistente hace uso del modulo MTCNN - Multi-task Cascaded Convolutional Networks, para realizar la detección del rostro en la imagen.
+2. Se obtiene una imagen normalizada con el puro rostro resultante de la ejecución del método:
+
+````
+caras = detector.detect_faces(pixeles) #Se obtienen la caras a través de Multi-task Cascaded Convolutional Networks
+````
+3. Se almacena la imagen con el nombre del rostro recibido en el comando, en este caso **cris**
+
+<p align="center">
+  <img src="https://github.com/badillo-christian/praxthon_2022/blob/main/blob/master/cris.jpg?raw=true" alt="cris.jpg"/>
+</p>
+
+
+
+
