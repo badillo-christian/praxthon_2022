@@ -22,6 +22,8 @@ VOICE_RATE = 142
 TEMP_FILE_DETECTION = 'temp.jpg'
 OS_VOICE_IDENTIFIER = 2
 UMBRAL_IDENTIFICACION_ROSTRO = 0.93
+PATH_PESOS_YOLO = 'C:/praxthon/model_pesos/best.pt'
+EXTENSION_JPG = '.jpg'
 
 #COMANDOS
 COMANDO_QUE_HORA_ES = 'qué hora es'
@@ -240,7 +242,7 @@ def entrena_rostro(nombre_usuario):
         if cv2.waitKey(1) == 27:   #Al teclear ESC se toma el frame a guardar como image         
             break
     usuario_img = nombre_usuario
-    cv2.imwrite(usuario_img+".jpg",frame) #Se guarda a disco el frame como imagen      
+    cv2.imwrite(usuario_img + EXTENSION_JPG, frame) #Se guarda a disco el frame como imagen      
     cap.release()                               
     cv2.destroyAllWindows()
 
@@ -259,11 +261,11 @@ def entrena_rostro(nombre_usuario):
             pyplot.axis('off')
             cara_reg = data[y1:y2, x1:x2]
             cara_reg = cv2.resize(cara_reg,(150,200), interpolation = cv2.INTER_CUBIC) #Se obtiene unicamente la cara
-            cv2.imwrite(usuario_img+".jpg",cara_reg) #Se guarda a disco la imagen de la cara
+            cv2.imwrite(usuario_img + EXTENSION_JPG ,cara_reg) #Se guarda a disco la imagen de la cara
             pyplot.imshow(data[y1:y2, x1:x2])
         pyplot.show()
 
-    img = usuario_img+".jpg"
+    img = usuario_img + EXTENSION_JPG
     pixeles = pyplot.imread(img)
     detector = MTCNN()
     caras = detector.detect_faces(pixeles) #Se obtienen la caras a través de Multi-task Cascaded Convolutional Networks
@@ -315,14 +317,14 @@ def detecta_rostro():
     detectado = False
     for i in range(len(im_archivos)):
         print(im_archivos[i])
-        if(im_archivos[i].__contains__('.jpg') and im_archivos[i] != TEMP_FILE_DETECTION): #Comparo la cara actual con las previamente entrenadas
+        if(im_archivos[i].__contains__(EXTENSION_JPG) and im_archivos[i] != TEMP_FILE_DETECTION): #Comparo la cara actual con las previamente entrenadas
             print(f'validando contra {im_archivos[i]}')
             rostro_reg = cv2.imread(im_archivos[i])
             rostro_log = cv2.imread(TEMP_FILE_DETECTION)
             similitud = similitud_orb(rostro_reg, rostro_log)
             print(similitud)
             if similitud >= UMBRAL_IDENTIFICACION_ROSTRO: # Si cumple con un valor mayot o igual al umbral lo considera como el mismo
-                nombre_detectado = im_archivos[i].replace('.jpg','')
+                nombre_detectado = im_archivos[i].replace(EXTENSION_JPG,'')
                 hablar(f'Ya se quien eres, eres: {nombre_detectado}')
                 detectado = True
                 break
@@ -334,7 +336,7 @@ def detecta_objeto():
     """
     hablar('Tengo implementada una red neuronal entrenada con YOLO v5, y fui entrenada para detectar objetos parecidos a carritos de juguete.')
     hablar('Coloca un carrito de juguete para su detección.')
-    model = torch.hub.load('ultralytics/yolov5', 'custom', path = 'C:/praxthon/model_pesos/best.pt') #Se carga el archivo de pesos previamente entrenado
+    model = torch.hub.load('ultralytics/yolov5', 'custom', path = PATH_PESOS_YOLO) #Se carga el archivo de pesos previamente entrenado
     
     cap = cv2.VideoCapture(0)
     while(True):
